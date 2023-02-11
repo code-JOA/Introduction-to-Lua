@@ -1,3 +1,4 @@
+<!-- #region -->
 Day 2: Tables All the Way Down
 Today, we’re going to look at two concepts that define the Lua experience: tables and coroutines. As with many prototype languages, tables define your data. Coroutines define your control flow. Both are simple but tremendously powerful, underpinning everything from Lua’s object system to your own domain-specific languages.
 
@@ -228,7 +229,8 @@ ena: one
 tria: three
 ​ 	
 dyo: two
-We’ve changed the default behavior for printing tables to strings. Now, when we call print(), Lua will look for __tostring in the metatable and find this function. The end result is a much more descriptive output.
+We’ve changed the default behavior for printing tables to strings. Now, when we call print(), 
+Lua will look for __tostring in the metatable and find this function. The end result is a much more descriptive output.
 
 Now that we’ve dipped our toes in with an easy function, let’s look at a more complicated case.
 
@@ -756,25 +758,6 @@ Safely namespaces the code in a local variable
 
 Next, add the punch() and block() functions we saw at the beginning of this section, plus the setup calls to schedule() and run(). When you run lua punch.lua, you should see five punches flying by, with blocks happening about half as frequently. Looks like we’re better at offense than defense.
 
-An Interview with Roberto Ierusalimschy, creator of Lua
-Us:
-Why did you write Lua?
-
-Roberto:
-Back in 1993, I was working as a consultant for Tecgraf, a partnership between my university (PUC-Rio) and Petrobras (the Brazilian Oil Company). There were two programs with somewhat similar problems for end-user configuration. People there had developed some little languages for their specific needs, but soon they realized that they needed more power from their languages, such as full arithmetic expressions, variables, conditionals, and even some abstractions (functions). However, they did not want to entangle their entire program with this configuration language. At that time, the only language with that profile was Tcl, but its syntax was too confusing for our users, who were mainly non-professional programmers (such as geologists and mechanical engineers). So, we started Lua for the very specific goal of providing a good language for programs that needed a good configuration language.
-
-Us:
-What do you like the most about Lua?
-
-Roberto:
-Lua is a language with a very clear and small set of goals. It does not try to be everything for everybody. I am the first to recommend other languages when that is the case. Language design involves many trade-offs, and different languages solve those trade-offs in different ways, which are good or bad for different uses and users. A good programmer should know how to choose the best tool for each problem.
-
-Us:
-What kinds of problems does it solve the best?
-
-Roberto:
-I think Lua is best suited for what it was created, real scripting. Nowadays, most people use "scripting language" as almost a synonym for dynamic language. But scripting has a more specific meaning, of a language to "orchestrate," or to "glue," software that is frequently written in a different language. (Thinki
-Next, we looked at coroutines, Lua’s approach to concurrency. Even though coroutines expose a tiny API, we can use them to build sophisticated and powerful multitasking programs.
 
 Tomorrow, we’re going to teach Lua to interact with C++ code and generate some music. Remember that scheduler we wrote today? We’re going to need it to manage all the different voices that are contributing to our song.
 
@@ -840,3 +823,8 @@ retry(
 Most of the time, the inner function will fail; retry() should keep trying until it’s achieved success or tried five times.
 
 Hint: You may need to create more than one coroutine.
+<!-- #endregion -->
+
+```python
+
+```
